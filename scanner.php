@@ -14,7 +14,7 @@
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
         console.log(content);
-        $.post("https://webhook.site/d281b7f7-5f7d-4b86-aecc-d0cb5d65efd6",JSON.stringify({
+        $.post("postqr.php",JSON.stringify({
           checkinID: content
         }),function() {
           alert('post succes');
